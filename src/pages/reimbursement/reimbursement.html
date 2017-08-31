@@ -1,8 +1,8 @@
 
 <ion-header>
   <ion-navbar color="energy">
-    <ion-title>
-        全部
+    <ion-title id="title-pointer" (click)="show = !show">
+        全部<ion-icon name="arrow-down" class="down-center"></ion-icon>
     </ion-title> 
    <ion-buttons end class="apply">申请报销</ion-buttons>
   </ion-navbar>
@@ -10,9 +10,24 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content id="reimbursement">
+  <div id="under-model" *ngIf="show"></div>
+  <div id="select-all" *ngIf="show">
     <ion-list>
-      <!-- <ion-label>全部<ion-icon name="arrow-down" class="down-center"></ion-icon></ion-label> -->
-      <ion-item center>Enable</ion-item>
+      <ion-item *ngFor="let item of items" [ngStyle] = "setStyles()" (click) = "show = !show">{{item.value}}</ion-item>
     </ion-list>
+  </div>
+  <div id="status-list">
+    <ion-list>
+      <ion-item *ngFor="let statu of status">
+          <h3 class="title-name">{{statu.nameWipe}}</h3>
+          <p class="happen">{{statu.wipeTime}}</p>
+          <div class="time-date" item-right>
+              <span class="new-time">{{statu.date}}</span>
+              <button ion-button color="{{statu.color}}" round>{{statu.currentStatus}}</button>
+          </div>
+      </ion-item>
+    </ion-list>
+  </div>
+    
 </ion-content>
