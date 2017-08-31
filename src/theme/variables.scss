@@ -28,12 +28,15 @@ $colors: (
   primary:    #1E50EB,
   secondary:  #677077,
   lightprimary:     #B5B5B7,
-  light:      #f4f4f4,
+  light:      #c5c5c5,
   dark:       #222,
   energy:      #38c0ff,
   white:      #ffffff,
-  danger:       #e31818,
-  grey:       #bdbdbd
+  danger:       #ff360e,
+  grey:       #bdbdbd,
+  orange:    #ffad0e,
+  green:    #3bcf27,
+  blue:         #2db2ff,
 );
 
 $toolbar-background: color($colors, primary);
