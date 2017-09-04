@@ -12,6 +12,9 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
+import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
+import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
+import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,15 +28,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    // ReimbursementPage,
+    ApplyreimbursementPage
     // SettingPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
-      backButtonText:'返回'
+      backButtonText:'返回',
+      cancelButton:' 取消'
     }),
-    SettingPageModule
+    SettingPageModule,
+    ReimbursementPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -45,7 +52,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ContactPage,
     HomePage,
     TabsPage,
-    SettingPage
+    SettingPage,
+    ReimbursementPage,
+    ApplyreimbursementPage
   ],
   providers: [
     StatusBar,
