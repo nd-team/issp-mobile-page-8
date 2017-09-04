@@ -4,7 +4,7 @@
     <ion-title id="title-pointer" (click)="show = !show">
         全部<ion-icon name="arrow-down" class="down-center"></ion-icon>
     </ion-title> 
-   <ion-buttons end class="apply">申请报销</ion-buttons>
+   <ion-buttons end class="apply" (click)="apply()">申请报销</ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -14,7 +14,7 @@
   <div id="under-model" *ngIf="show"></div>
   <div id="select-all" *ngIf="show">
     <ion-list>
-      <ion-item *ngFor="let item of items" [ngStyle] = "setStyles()" (click) = "show = !show">{{item.value}}</ion-item>
+      <ion-item *ngFor="let item of items" [ngStyle]="setStyles()" (click)="show = !show">{{item.value}}</ion-item>
     </ion-list>
   </div>
   <div id="status-list">

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ApplyreimbursementPage } from '../applyreimbursement/applyreimbursement';
 
 /**
  * Generated class for the ReimbursementPage page.
@@ -105,6 +106,12 @@ export class ReimbursementPage {
     };
     return styles;
   }
+
+  apply() {
+    console.log(123);
+    this.navCtrl.push(ApplyreimbursementPage);
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReimbursementPage');
   }
