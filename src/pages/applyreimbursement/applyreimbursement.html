@@ -13,7 +13,7 @@
       <ion-list>
       <ion-item>
           <ion-label>报销发生的时间</ion-label>
-          <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="fixed1"></ion-datetime>
+          <ion-datetime displayFormat="YYYY-MM-DD" [(ngModel)]="fixed1" cancelText="取消" doneText="确定"></ion-datetime>
           <!-- <ion-icon name="arrow-down" id="down-center" item-right color="grey" center></ion-icon> -->
       </ion-item>
       <ion-item>
@@ -40,7 +40,7 @@
       </ion-item>
       <ion-item>
         <ion-label>地区</ion-label>
-        <ion-select [(ngModel)]="area">
+        <ion-select [(ngModel)]="area" okText="确定" cancelText="取消">
           <ion-option value="北京">北京</ion-option>
           <ion-option value="深圳">深圳</ion-option>
           <ion-option value="广州">广州</ion-option>
@@ -51,7 +51,7 @@
       </ion-item>
       <ion-item>
         <ion-label>项目名称</ion-label>
-        <ion-select [(ngModel)]="projectName">
+        <ion-select [(ngModel)]="projectName" okText="确定" cancelText="取消">
           <ion-option value="1461项目规划">1461项目规划</ion-option>
           <ion-option value="issp开发">issp开发</ion-option>
           <ion-option value="组织结构">组织结构</ion-option>
@@ -62,7 +62,7 @@
       </ion-item>
       <ion-item>
         <ion-label>三级科目</ion-label>
-        <ion-select [(ngModel)]="subjects" interface="action-sheet">
+        <ion-select [(ngModel)]="subjects" interface="action-sheet" cancelText="取消">
           <ion-option value="人员租赁">人员租赁</ion-option>
           <ion-option value="手机端">手机端</ion-option>
           <ion-option value="科技积分">科技积分</ion-option>
