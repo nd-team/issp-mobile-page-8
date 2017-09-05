@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar color="energy">
+    <ion-title>报销详情</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content id="details">
+  <ion-list id="top">
+    <ion-item>
+      <h3 class="title-name">王博文</h3>
+      <p class="submit-review">提交时间：2017-08-19</p>
+      <p class="submit-review">审核时间：2017-08-26</p>
+      <button ion-button color="orange" round item-right id="status-check">待审核</button>
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines id="under">
+      <ion-item *ngFor="let item of items">
+        <p class="left-text"><span class="title-data">{{item.Immutable}}：</span><span class="varble">{{item.variable}}</span></p>
+      </ion-item>
+  </ion-list>
+  <button ion-button full block id="button" color="buttoncolor">去寄件</button>
+</ion-content>

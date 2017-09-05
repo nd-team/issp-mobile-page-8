@@ -15,6 +15,7 @@ import { SettingPageModule } from '../pages/setting/setting.module';
 import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
 import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
+import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,14 +31,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     // ReimbursementPage,
-    ApplyreimbursementPage
+    ApplyreimbursementPage,
+    ReimdetailsPage
     // SettingPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
-      backButtonText:'',
-      cancelButton:' 取消'
+      backButtonText:''
     }),
     SettingPageModule,
     ReimbursementPageModule
@@ -54,7 +55,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SettingPage,
     ReimbursementPage,
-    ApplyreimbursementPage
+    ApplyreimbursementPage,
+    ReimdetailsPage
   ],
   providers: [
     StatusBar,

@@ -108,7 +108,6 @@ export class ReimbursementPage {
   }
 
   apply() {
-    console.log(123);
     this.navCtrl.push(ApplyreimbursementPage);
   }
 
