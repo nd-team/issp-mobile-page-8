@@ -4,7 +4,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Welcome } from '../pages/welcome/welcome';
-// import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
+// import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
+
 
 @Component({
   templateUrl: 'app.html'

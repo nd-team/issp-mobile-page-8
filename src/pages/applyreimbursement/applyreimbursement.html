@@ -2,7 +2,9 @@
 <ion-header>
   <ion-navbar color="energy">
     <ion-title>申请报销</ion-title>
-    <ion-buttons end class="commit">提交</ion-buttons>
+    <ion-buttons end class="commit">
+        <button ion-button (click)="submit()">提交</button> 
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -87,13 +89,13 @@
       <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
         <ion-item>
           <ion-label>报销金额</ion-label>
-          <ion-input type="number" placeholder="请输入金额">元</ion-input>
-          <!-- <span>元 |</span> -->
-          <ion-input type="number" placeholder="单据数量" item-right></ion-input> 
+          <ion-input type="number" placeholder="请输入金额" class="input-one"></ion-input>|
+          <!-- <ion-input type="number" placeholder="单据数量" item-right class="input-right"></ion-input> -->
+          <ion-input type="number" placeholder="单据数量" item-right class="input-right"></ion-input> 
         </ion-item>
         <ion-item>
           <ion-label>参与人 <span id="optional">(选填)</span></ion-label>
-          <ion-input type="text" placeholder="请输入参与人" id="input-right"></ion-input>
+          <ion-input type="text" placeholder="请输入参与人" class="input-right"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>是否有发票</ion-label>
@@ -105,18 +107,17 @@
         </ion-item>
         <ion-item>
           <ion-label>无发票说明</ion-label>
-          <ion-input type="text" placeholder="请输入说明"></ion-input>
+          <ion-input type="text" placeholder="请输入说明" class="input-right"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label>上传凭证</ion-label>
           <div id="upload"></div>
         </ion-item>
-        <ion-item id="explanation"> 
+        <ion-item id="item-explanation"> 
           <ion-label>补充说明</ion-label>
-          <!-- <div id="block-say"> -->
-            <ion-textarea name="description" id="description" placeholder="例如:交代清楚报销事由"></ion-textarea>          
-          <!-- </div> -->
-          <!-- <ion-textarea>例如:交代清楚报销事由</ion-textarea> -->
+        </ion-item>
+        <ion-item id="noBottom">
+          <ion-textarea name="description" class="description" placeholder="例如:交代清楚报销事由"></ion-textarea>   
         </ion-item>
       </form>
     </ion-list>

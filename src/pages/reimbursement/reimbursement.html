@@ -4,7 +4,9 @@
     <ion-title id="title-pointer" (click)="show = !show">
         全部<ion-icon name="arrow-down" class="down-center"></ion-icon>
     </ion-title> 
-   <ion-buttons end class="apply" (click)="apply()">申请报销</ion-buttons>
+   <ion-buttons end>
+     <button ion-button class="apply" (click)="apply()">申请报销</button> 
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

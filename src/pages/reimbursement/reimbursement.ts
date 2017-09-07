@@ -108,36 +108,11 @@ export class ReimbursementPage {
   }
 
   apply() {
-    console.log(123);
     this.navCtrl.push(ApplyreimbursementPage);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReimbursementPage');
   }
-  
-  // firstname: string = 'Jimmy';
-  
-  //   changeName () {
-  //     this.firstname = this.alternate ? 'Daniel' : 'Houssein';
-  //     this.alternate = !this.alternate;
-  //   }
-  
-  //   isHoussein() {
-  //     return this.firstname === 'Houssein';
-  //   }
-  
-  //   isDaniel() {
-  //     return this.firstname === 'Daniel';
-  //   }
-  
-  //   setStyles() {
-  //     let styles = {
-  //       'color':  this.isHoussein() ? 'red' : 'black',
-  //       'font-size':  this.isDaniel() ? '3em' : '2em',
-  //       'font-style':  this.isDaniel() || this.isHoussein() ? 'italic' : 'normal',
-  //     };
-  //     return styles;
-  //   }
 
 }
