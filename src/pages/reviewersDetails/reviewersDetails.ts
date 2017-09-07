@@ -4,10 +4,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-reimdetails',
-  templateUrl: 'reimdetails.html',
+  selector: 'page-reviewersDetails',
+  templateUrl: 'reviewersDetails.html',
 })
-export class ReimdetailsPage {
+export class ReviewersDetailsPage {
 
   items = [
     {

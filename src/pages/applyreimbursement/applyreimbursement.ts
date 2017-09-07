@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ReimdetailsPage } from '../reimdetails/reimdetails';
 
 
 @IonicPage()
@@ -25,5 +26,8 @@ export class ApplyreimbursementPage {
   };
   logForm(form){
     console.log(form.value)
+  }
+  submit(){
+    this.navCtrl.push(ReimdetailsPage);
   }
 }

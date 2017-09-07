@@ -16,6 +16,7 @@ import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
 import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
 import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
+import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,7 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     // ReimbursementPage,
     ApplyreimbursementPage,
-    ReimdetailsPage
+    ReimdetailsPage,
+    ReviewersDetailsPage
     // SettingPage
   ],
   imports: [
@@ -56,7 +58,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SettingPage,
     ReimbursementPage,
     ApplyreimbursementPage,
-    ReimdetailsPage
+    ReimdetailsPage,
+    ReviewersDetailsPage
   ],
   providers: [
     StatusBar,

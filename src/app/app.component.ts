@@ -3,14 +3,15 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-// import { Welcome } from '../pages/welcome/welcome';
-import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
+import { Welcome } from '../pages/welcome/welcome';
+// import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
+
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ReimdetailsPage;
+  rootPage:any = Welcome;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
