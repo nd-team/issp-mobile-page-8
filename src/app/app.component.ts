@@ -3,7 +3,7 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { Welcome } from '../pages/welcome/welcome';
+import { Home } from '../pages/home/home';
 // import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
 
 
@@ -11,7 +11,7 @@ import { Welcome } from '../pages/welcome/welcome';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Welcome;
+  rootPage:any = Home;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
