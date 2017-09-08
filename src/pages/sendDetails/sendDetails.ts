@@ -4,10 +4,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-reviewersDetails',
-  templateUrl: 'reviewersDetails.html',
+  selector: 'page-sendDetails',
+  templateUrl: 'sendDetails.html',
 })
-export class ReviewersDetailsPage {
+export class SendDetails {
 
   items = [
     {
@@ -71,6 +71,24 @@ export class ReviewersDetailsPage {
     }
   ];
 
+  posts = [
+    {
+      Immutable: '收件人',
+      variable:'王博文'
+    },
+    {
+      Immutable: '寄件时间',
+      variable:'2017-08-21'
+    },
+    {
+      Immutable: '地址',
+      variable:'广东省广州市天河区冠达商务中心112'
+    },
+    {
+      Immutable: '备注',
+      variable:'收到货记得发短信给我'
+    }
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
