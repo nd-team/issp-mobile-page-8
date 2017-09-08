@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ApplyreimbursementPage } from '../applyreimbursement/applyreimbursement';
+import { ReimdetailsPage } from '../reimdetails/reimdetails';
 
 /**
  * Generated class for the ReimbursementPage page.
@@ -76,19 +77,19 @@ export class ReimbursementPage {
       let currentColor =this.status[i].currentStatus
         switch(currentColor){
           case '待审核':
-          this.status[i].color = 'orange'
+            this.status[i].color = 'orange'
           break;
           case '待分析':
-          this.status[i].color = 'danger'
+            this.status[i].color = 'danger'
           break;
           case '待核对':
-          this.status[i].color = 'green'
+            this.status[i].color = 'green'
           break;
           case '已报销':
-          this.status[i].color = 'blue'
+            this.status[i].color = 'blue'
           break;
           case '待解冻':
-          this.status[i].color = 'light'
+            this.status[i].color = 'light'
           break;
         }
     }
@@ -111,6 +112,9 @@ export class ReimbursementPage {
     this.navCtrl.push(ApplyreimbursementPage);
   }
 
+  toDetail(){
+    this.navCtrl.push(ReimdetailsPage);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReimbursementPage');
   }

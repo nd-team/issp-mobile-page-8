@@ -21,7 +21,7 @@
   </div>
   <div id="status-list">
     <ion-list>
-      <ion-item *ngFor="let statu of status">
+      <ion-item *ngFor="let statu of status" (click)="toDetail()">
           <h3 class="title-name">{{statu.nameWipe}}</h3>
           <p class="happen">{{statu.wipeTime}}</p>
           <div class="time-date" item-right>

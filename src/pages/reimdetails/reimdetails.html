@@ -21,15 +21,12 @@
         <p class="left-text"><span class="title-data">{{item.Immutable}}：</span><span class="varble">{{item.variable}}</span></p>
       </ion-item>
       <div id="picture-show">
-          <!-- <ion-label>{{post.text}}：</ion-label>
-           <p class="left-text">
-            <span class="title-left"></span> -->
-            <!-- <img [src]="post.postImageUrl">
-          </p> -->
         <span>凭证：</span>
-        <img src="assets/imgs/check_pic1.png" class="img-eff"/>
-        <img src="assets/imgs/check_pic2.png" class="img-eff"/>
+        <div class="certificate-pic">
+          <img src="assets/imgs/check_pic1.png" class="img-eff"/>
+          <img src="assets/imgs/check_pic2.png" class="img-eff"/>
         </div>
+      </div>
   </ion-list>
-  <button ion-button full block id="button" color="buttoncolor">去寄件</button>
+  <button ion-button fixed full block id="button" color="buttoncolor" (click)="send()">去寄件</button>
 </ion-content>

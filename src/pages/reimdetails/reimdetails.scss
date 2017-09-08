@@ -66,21 +66,28 @@ page-reimdetails {
             display: flex;
             justify-content: flex-start;
             margin-bottom: 15px;
+            height: 100%;
+            width: 100%;
             span{
                 display: inline-block;
-                width: 105px;
+                width: 8.8rem;
                 text-align: right;
                 font-size: 1.8rem;
                 color: #999;
                 margin-right: 10px;
             }
-            .img-eff{
-                display: inline-block;
-                max-width: 100%;
-                height: 100px;
-                margin-right:10px;
-                // width: 130px;
+            .certificate-pic{
+                display: flex;
+                flex-wrap: wrap;
+                .img-eff{
+                    display: inline-block;
+                    max-width: 100%;
+                    height: 100px;
+                    margin-right:10px;
+                    margin-bottom: 10px;
+                }
             }
+            
         }
     }
 }
