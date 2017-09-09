@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ReimdetailsPage } from '../reimdetails/reimdetails';
+import { ReimbursementPage } from '../reimbursement/reimbursement';
 
 
 @IonicPage()
@@ -24,10 +24,11 @@ export class ApplyreimbursementPage {
   todo = {
     description:"例如:交代清楚报销事由"
   };
+  
   logForm(form){
     console.log(form.value)
   }
   submit(){
-    this.navCtrl.push(ReimdetailsPage);
+    this.navCtrl.push(ReimbursementPage);
   }
 }

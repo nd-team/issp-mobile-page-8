@@ -6,11 +6,12 @@ import { MyApp } from './app.component';
 import { Home } from '../pages/home/home';
 import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
-import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
 import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
 import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
 import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
+import { MailingPage } from '../pages/mailing/mailing';
+import { SendDetails } from '../pages/sendDetails/sendDetails';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,15 +28,17 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
   declarations: [
     MyApp,
     Home,
-    // ReimbursementPage,
     ApplyreimbursementPage,
-
     ReimdetailsPage,
     BorrowManagePageModule,
     BorrowDetailPageModule,
     ApplyborrowmoneyPageModule,
     ReviewersDetailsPage
-    // SettingPage
+
+    ReviewersDetailsPage,
+    MailingPage,
+    SendDetails
+
   ],
   imports: [
     BrowserModule,
@@ -50,10 +53,11 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
     MyApp,
     Home,
     SettingPage,
-    ReimbursementPage,
     ApplyreimbursementPage,
     ReimdetailsPage,
-    ReviewersDetailsPage
+    ReviewersDetailsPage,
+    MailingPage,
+    SendDetails
   ],
   providers: [
     StatusBar,

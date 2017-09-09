@@ -27,6 +27,19 @@
           <img src="assets/imgs/check_pic2.png" class="img-eff"/>
         </div>
       </div>
+      <div id="bottom">
+          <ion-item *ngFor="let post of posts" id="firstBorder">
+            <p class="left-text"><span class="title-data">{{post.Immutable}}：</span><span class="varble">{{post.variable}}</span></p>
+          </ion-item>
+      </div>
+      <!-- <ion-item *ngFor="let post of posts" id="firstBorder">
+          <p class="left-text"><span class="title-data">{{post.Immutable}}：</span><span class="varble">{{post.variable}}</span></p>
+        </ion-item> -->
   </ion-list>
-  <button ion-button fixed full block id="button" color="buttoncolor" (click)="send()">去寄件</button>
+  <!-- <ion-list no-lines>
+      <ion-item *ngFor="let post of posts" id="firstBorder">
+          <p class="left-text"><span class="title-data">{{post.Immutable}}：</span><span class="varble">{{post.variable}}</span></p>
+        </ion-item>
+  </ion-list> -->
+  <!-- <button ion-button fixed full block id="button" color="buttoncolor" (click)="send()">去寄件</button> -->
 </ion-content>

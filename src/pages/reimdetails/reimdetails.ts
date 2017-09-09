@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { MailingPage } from '../mailing/mailing';
+
 
 @IonicPage()
 @Component({
@@ -81,6 +83,9 @@ export class ReimdetailsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  send(){
+    this.navCtrl.push(MailingPage);
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReimdetailsPage');
   }

@@ -1,13 +1,12 @@
-page-reimdetails {
+page-sendDetails {
     #details{
-        // background: url('/assets/imgs/check_pic1.png');
+
         .list-ios{
             margin-bottom: 10px;
         }
         #top{
            &.list-ios > .item-block:first-child{
                 border-top: 0 none;
-                // padding-left: 30px;
             }
             &.list-md > .item-block:last-child{
                 border-bottom: 0.55px solid #c8c7cc;
@@ -37,6 +36,21 @@ page-reimdetails {
             &.list > .item-block:last-child{
                 border-bottom: 0 none;
             }
+            #bottom{
+                padding:{
+                    top: 10px;
+                    left: 16px;
+                    right: 16px;
+                }
+                #firstBorder{
+                                
+                    &:first-child{
+                        padding-top: 10px;
+                        border-top: 1px solid #dbdbdb;
+                    }
+                }
+            }
+            
             .item-block{
                 min-height: 2rem;
                 .item-inner{
@@ -52,7 +66,14 @@ page-reimdetails {
                         text-align: right;
                     }
                     .varble{
+                        display: inline-block;
+                        flex: 1;
                         color: #333;
+                        // word-wrap: break-word; 
+                        // word-break: normal; 
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                 }
             }
