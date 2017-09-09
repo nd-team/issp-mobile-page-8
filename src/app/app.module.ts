@@ -15,13 +15,25 @@ import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//借款
+import { BorrowManagePage } from '../pages/borrowmanage/borrowmanage';
+import { BorrowManagePageModule } from '../pages/borrowmanage/borrowmanage.module';
+import { ApplyborrowmoneyPage } from '../pages/applyborrowmoney/applyborrowmoney';
+import { ApplyborrowmoneyPageModule } from '../pages/applyborrowmoney/applyborrowmoney.module';
+import { BorrowDetailPageModule } from '../pages/borrow-detail/borrow-detail.module';
+import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.module';
+
 @NgModule({
   declarations: [
     MyApp,
     Home,
     // ReimbursementPage,
     ApplyreimbursementPage,
+
     ReimdetailsPage,
+    BorrowManagePageModule,
+    BorrowDetailPageModule,
+    ApplyborrowmoneyPageModule,
     ReviewersDetailsPage
     // SettingPage
   ],
