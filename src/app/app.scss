@@ -14,3 +14,25 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.list-ios > .item-block {
+    &.no-bottom-border {
+        border-bottom: none;
+    }
+    &.no-top-border {
+        border-top: none;
+    }
+}
+.title-md {
+    &.toCenter {
+        padding-top:0.5rem;
+        margin-left: 7rem;
+    }
+}
+.submit{
+    &.bar-button-default-md{
+        margin-top:13px;
+    }
+}
+.marginTop-10 {
+        margin-top:10px;
+    }

@@ -16,8 +16,17 @@ import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
 import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
 
+//借款
+import { BorrowManagePage } from '../pages/borrowmanage/borrowmanage';
+import { BorrowManagePageModule } from '../pages/borrowmanage/borrowmanage.module';
+import { ApplyborrowmoneyPage } from '../pages/applyborrowmoney/applyborrowmoney';
+import { ApplyborrowmoneyPageModule } from '../pages/applyborrowmoney/applyborrowmoney.module';
+import { BorrowDetailPageModule } from '../pages/borrow-detail/borrow-detail.module';
+import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.module';
+
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { MultiPickerModule } from 'ion-multi-picker';
 
 @NgModule({
   declarations: [
@@ -30,7 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     TabsPage,
     // ReimbursementPage,
-    ApplyreimbursementPage
+    ApplyreimbursementPage,
     // SettingPage
   ],
   imports: [
@@ -40,7 +49,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
       cancelButton:' 取消'
     }),
     SettingPageModule,
-    ReimbursementPageModule
+    ReimbursementPageModule,
+    BorrowManagePageModule,
+    BorrowDetailPageModule,
+    ApplyborrowmoneyPageModule,
+    // BorrowReturnPageModule,
+    MultiPickerModule 
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -54,7 +68,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsPage,
     SettingPage,
     ReimbursementPage,
-    ApplyreimbursementPage
+    ApplyreimbursementPage,
+    BorrowManagePage,
+    ApplyborrowmoneyPage,
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar color="energy" no-border-bottom>
+    <ion-title id="title-pointer" (click)="show = !show">
+        {{seleFont || '全部'}}<ion-icon name="arrow-down" class="down-center"></ion-icon>
+    </ion-title>
+   <ion-buttons end>
+      <button ion-button icon-only class="apply" (click)="toPage()">
+        申请借款
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content id="borrowManage-c">
+  <div id="under-model" *ngIf="show"></div>
+  <div id="select-all" *ngIf="show">
+    <ion-list>
+      <ion-item *ngFor="let item of items;let i = index"  [ngClass]="{'active-child':i == index}" (click)="selectFilter(i,item.value)">{{item.value}}</ion-item>
+    </ion-list>
+  </div>
+  <div id="status-list">
+    <ion-list>
+      <ion-item *ngFor="let statu of statusList" (click)="goDetail(statu.currentStatus)">
+          <h3 class="title-name">{{statu.nameWipe}}</h3>
+          <p class="happen">{{statu.wipeTime}}</p>
+          <div class="time-date" item-right>
+              <span class="new-time">{{statu.date}}</span>
+              <button ion-button color="{{statu.color}}" round>{{statu.currentStatus}}</button>
+          </div>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
