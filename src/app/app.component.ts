@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Home } from '../pages/home/home';
-import { ReviewReason } from '../pages/reviewReason/reviewReason';
+import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
 // import { AccordionListPage } from '../pages/accordion-list/accordion-list';
 
 
@@ -12,7 +12,7 @@ import { ReviewReason } from '../pages/reviewReason/reviewReason';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = ReviewReason;
+  rootPage:any = Home;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

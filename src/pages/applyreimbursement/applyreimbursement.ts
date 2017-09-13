@@ -15,6 +15,20 @@ export class ApplyreimbursementPage {
   area: string = "广州";
   projectName: string = "1461项目规划";
   subjects: string = "人员租赁";
+  Iamges:any = [
+    {
+      id: 1,
+      url: 'assets/imgs/userImage1.png'
+    },
+    {
+      id: 2,
+      url: 'assets/imgs/userImage1.png'
+    },
+    {
+      id: 3,
+      url: 'assets/imgs/userImage2.png'
+    }
+  ]
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -30,5 +44,12 @@ export class ApplyreimbursementPage {
   }
   submit(){
     this.navCtrl.push(ReimbursementPage);
+  }
+  addImage() {
+    let o:any = {id:this.Iamges.length,url:'assets/imgs/userImage2.png'};
+    this.Iamges.push(o);
+  }
+  delImage(val:number) {
+    this.Iamges.splice(val,1);
   }
 }

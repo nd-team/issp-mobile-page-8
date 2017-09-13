@@ -32,5 +32,26 @@
         </div>
       </div>
   </ion-list>
-  <button ion-button fixed full block id="button" color="buttoncolor" (click)="send()">去寄件</button>
+  <div id="bottom" *ngIf="status == '已报销'">
+    <ion-list no-lines id="details-marks">
+      <ion-item *ngFor="let post of posts" class="firstBorder">
+          <p class="bottom-text"><span class="title-data">{{post.Immutable}}：</span><span class="varble">{{post.variable}}</span></p>
+        </ion-item> 
+    </ion-list>
+    <ion-list no-lines id="reason">
+        <button ion-item (click)="itemReason()">
+          审核过程/原因
+        </button> 
+      </ion-list>
+  </div>
+
+  <div id="toChecked" *ngIf="status == '待核对'">
+      <button ion-button color="wrongColor" class="check-wrong">核对有误</button>
+      <button ion-button color="danger" class="pay">去付款</button>  
+  </div>
+  
+  <button ion-button full block id="button" color="orangel" *ngIf="status == '待审核'" (click)="send()">{{buttonName}}</button>
+  <!-- <button ion-button full block id="button" color="danger" *ngIf="isAuditor" (click)="send()">去审核</button> -->
+  <button ion-button full block id="button" color="orangel" *ngIf="status == '待解冻'">{{buttonName}}</button>
+  <button ion-button full block id="button" color="danger" *ngIf="status == '待分析'">{{buttonName}}</button>
 </ion-content>

@@ -102,16 +102,24 @@
               <span class="radio-input">有</span>
               <i class="radio-input">无</i>
             </div>
-
           </ion-item>
           <ion-item>
             <ion-label>无发票说明</ion-label>
             <ion-input type="text" placeholder="请输入说明" class="input-right"></ion-input>
           </ion-item>
-          <ion-item>
+          <!-- <ion-item>
             <ion-label>上传凭证</ion-label>
             <div id="upload"></div>
-          </ion-item>
+          </ion-item> -->
+          <ion-item class="noBBottom">
+              上传凭证
+            </ion-item>
+            <ion-item>
+              <div class="upload">
+                <span class="image" (click)="addImage()"><img class="img" src="assets/imgs/addImage.png"></span>
+                <span class="image" *ngFor="let item of Iamges;let i = index;"><img class="img" src="{{item.url}}"><i (click)="delImage(i)"><img src="assets/imgs/close.png"></i></span>
+              </div>
+            </ion-item>
           <ion-item id="item-explanation">
             <ion-label>补充说明</ion-label>
           </ion-item>

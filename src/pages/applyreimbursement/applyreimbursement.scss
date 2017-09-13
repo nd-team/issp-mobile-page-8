@@ -22,7 +22,52 @@ page-applyreimbursement {
                 padding-left: 16px;
                 
             }
-            
+            .item-ios,.item-md{
+                padding: 0px;
+                .item-inner{
+                    padding-left: 14px;
+                    border-bottom: 0.2px solid #eeecf5;
+                    ion-icon {
+                        padding-top: 5px;
+                    }
+                }
+                &:first-child{
+                    border: none;
+                }
+                &:last-child {
+                    border: none;
+                }
+                &.noBBottom .item-inner {
+                    border-bottom: none;
+                }
+                ion-input {
+                    // margin: 8px 0px;
+                }
+            }
+            .upload {
+                display: flex;
+                flex-wrap:wrap;
+               
+                .image {
+                    position: relative;
+                    margin: 0.5rem;
+                    flex: 0 0 29%;
+                
+                    .img {
+                        max-width:100%;
+                        height: 80px;
+                    }
+                    i  {
+                        width: 1rem;
+                        position:absolute;
+                        top: -0.75rem;
+                        right: -0.6rem;
+                        img{
+                            max-width:100%;
+                        }
+                    }
+                }
+            }
             #noBottom{
                 .item-inner{
                     border-bottom:0 none;

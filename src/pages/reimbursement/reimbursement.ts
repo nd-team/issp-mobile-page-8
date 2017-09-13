@@ -125,6 +125,9 @@ export class ReimbursementPage {
           case '待解冻':
             this.status[i].color = 'light'
           break;
+          case '无报销':
+            this.status[i].color = 'light'
+          break;
         }
     }
   }
