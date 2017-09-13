@@ -6,15 +6,15 @@ import { MyApp } from './app.component';
 import { Home } from '../pages/home/home';
 import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
+
+//报销
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
 import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
-// import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
-import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
 import { MailingPage } from '../pages/mailing/mailing';
 import { SendDetails } from '../pages/sendDetails/sendDetails';
 import { Payment } from '../pages/payment/payment';
 import { Reimbursed } from '../pages/reimbursed/reimbursed';
-
+// 报销
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AccordionListPageModule } from '../pages/accordion-list/accordion-list.module';
@@ -32,8 +32,6 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
     MyApp,
     Home,
     ApplyreimbursementPage,
-    // ReimdetailsPage,  
-    ReviewersDetailsPage,
     MailingPage,
     SendDetails,
     Payment,
@@ -58,8 +56,6 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
     Home,
     SettingPage,
     ApplyreimbursementPage,
-    // ReimdetailsPage,
-    ReviewersDetailsPage,
     MailingPage,
     SendDetails,
     Payment,

@@ -4,6 +4,7 @@ import { ReimbursementPage } from './reimbursement';
 import { ReviewReasonModule } from '../reviewReason/reviewReason.module';
 import { VerificationModule } from '../verification/verification.module';
 import { ReimdetailsPageModule } from '../reimdetails/reimdetails.module';
+import { ReimbursementInvoiceModule } from '../reimbursement-invoice/reimbursement-invoice.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { ReimdetailsPageModule } from '../reimdetails/reimdetails.module';
     IonicPageModule.forChild(ReimbursementPage),
     ReviewReasonModule,
     VerificationModule,
-    ReimdetailsPageModule
+    ReimdetailsPageModule,
+    ReimbursementInvoiceModule
   ],
   exports: [
     ReimbursementPage,
