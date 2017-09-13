@@ -13,11 +13,12 @@
       <h3 class="title-name">王博文</h3>
       <p class="submit-review">提交时间：2017-08-19</p>
       <p class="submit-review">审核时间：2017-08-26</p>
-      <!-- <button ion-button color="{{statusColor}}" round item-right id="status-check">{{ status }}</button> -->
       <div class="btn" item-right>
-          <button ion-button color="{{statusColor}}" round class="status-check">{{ status }}</button>
-          <p class="money" *ngIf="status == '已报销'">200元</p>
-        </div>
+        <button ion-button color="blue" round class="status-check">已报销</button>
+        <p class="money">200元</p>
+      </div>
+      
+
     </ion-item>
   </ion-list>
   <ion-list no-lines id="under">
@@ -31,6 +32,15 @@
           <img src="assets/imgs/check_pic2.png" class="img-eff"/>
         </div>
       </div>
+      <div id="bottom">
+          <ion-item *ngFor="let post of posts" id="firstBorder">
+            <p class="left-text"><span class="title-data">{{post.Immutable}}：</span><span class="varble">{{post.variable}}</span></p>
+          </ion-item>
+        </div>
   </ion-list>
-  <button ion-button fixed full block id="button" color="buttoncolor" (click)="send()">去寄件</button>
+  <ion-list no-lines id="reason">
+    <button ion-item (click)="itemReason()">
+      审核过程/原因
+    </button> 
+  </ion-list>
 </ion-content>

@@ -55,16 +55,35 @@ page-applyreimbursement {
             color: #999;
         }
         .input-right{
+            
+            background: #fff;
             .text-input{
+                
                 text-align: right;
             }
             
         }
         .input-one{
-            .text-input{
-               width: 100%; 
-            }   
+            display: flex;
+            align-items: center;
+            border-right:1px solid #dddddd;
+            
+            .text-input:first-child{
+                width: 9rem;
+        
+                text-align: right;
+            }
         }
+        
+
+        .money {
+            .input-one:after{
+              
+                content:'元 ';
+                margin-right: 10px;
+            } 
+        } 
+        
      
         .current{
             background-color: #07ba56;

@@ -86,11 +86,11 @@
       </ion-list>
       <ion-list>
         <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
-          <ion-item>
+          <ion-item class="money">
             <ion-label>报销金额</ion-label>
-            <ion-input type="number" placeholder="请输入金额" class="input-one"></ion-input>|
+            <ion-input type="text" placeholder="请输入金额" class="input-one"></ion-input>|
             <!-- <ion-input type="number" placeholder="单据数量" item-right class="input-right"></ion-input> -->
-            <ion-input type="number" placeholder="单据数量" item-right class="input-right"></ion-input>
+            <ion-input type="text" placeholder="单据数量" item-right class="input-right"></ion-input>
           </ion-item>
           <ion-item>
             <ion-label>参与人 <span id="optional">(选填)</span></ion-label>

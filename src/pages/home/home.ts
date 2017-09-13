@@ -27,6 +27,7 @@ export class Home {
       {
         title:'借款管理',
         message:'您有四个待办借款',
+        page:'BorrowManagePage'
       },
       {
         title:'通讯录',

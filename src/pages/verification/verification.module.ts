@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SendDetails } from './sendDetails';
+import { Verification } from './verification';
 
 @NgModule({
   declarations: [
-    SendDetails,
+    Verification,
   ],
   imports: [
-    IonicPageModule.forChild(SendDetails),
+    IonicPageModule.forChild(Verification),
   ],
   exports: [
-    SendDetails
+    Verification
   ]
 })
-export class SendDetailsModule {}
+export class VerificationModule {}

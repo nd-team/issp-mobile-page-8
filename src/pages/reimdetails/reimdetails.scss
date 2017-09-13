@@ -17,10 +17,20 @@ page-reimdetails {
                 border-bottom: 1px solid #c8c7cc;
                
             } 
+            .btn{
+                text-align: center;
+                .status-check{
+                    font-size: 16px;
+                }
+                p{
+                    font-size: 18px;
+                    color: #f00;
+                }
+            }
         }
         
         .title-name{
-            font-size: 28px;
+            font-size: 24px;
             color: #333;
         }
         .submit-review{

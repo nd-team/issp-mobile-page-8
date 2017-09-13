@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-// import { Payment } from '../payment/payment';
+
 
 /**
  * Generated class for the MailingPage page.
@@ -10,12 +10,29 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
  */
 @IonicPage()
 @Component({
-  selector: 'page-payment',
-  templateUrl: 'payment.html',
+  selector: 'page-reviewReason',
+  templateUrl: 'reviewReason.html',
 })
-export class Payment {
-  payWay: string = '现金';
-  sendTime = '2017-09-08'; 
+export class ReviewReason {
+
+  items = [
+    {
+      time:'2017-09-11',
+      description:'审核通过原因:符合标准'
+    },
+    {
+      time:'2017-09-08',
+      description:'分析通过原因:符合标准'
+    },
+    {
+      time:'2017-09-06',
+      description:'核对无误:已报销200元'
+    },
+    {
+      time:'2017-09-02',
+      description:'核对无误:已报销200元'
+    }
+  ];
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
@@ -27,12 +44,5 @@ export class Payment {
     console.log('ionViewDidLoad MailingPage');
   }
 
-  successAlert(){
-    let alert = this.alertCtrl.create({
-      title:'付款成功',
-      buttons: ['Ok']
 
-    });
-    alert.present()
-  }
 }

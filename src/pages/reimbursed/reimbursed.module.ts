@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { SendDetails } from './sendDetails';
+import { Reimbursed } from './reimbursed';
+
 
 @NgModule({
   declarations: [
-    SendDetails,
+    Reimbursed,
   ],
   imports: [
-    IonicPageModule.forChild(SendDetails),
+    IonicPageModule.forChild(Reimbursed),
   ],
   exports: [
-    SendDetails
+    Reimbursed
   ]
 })
-export class SendDetailsModule {}
+export class ReimbursedModule {}
