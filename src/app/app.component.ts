@@ -4,15 +4,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Home } from '../pages/home/home';
-import { Payment } from '../pages/payment/payment';
-// import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
+// import { Number } from '../pages/number/number';
+// import { AccordionListPage } from '../pages/accordion-list/accordion-list';
 
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Payment;
+  rootPage:any = Home;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

@@ -22,11 +22,12 @@ export class Home {
     this.items = [
       {
         title:'报销管理',
-        page:'ReimbursementPage' 
+        page:'ReimbursementPage'
       },
       {
         title:'借款管理',
         message:'您有四个待办借款',
+        page:'BorrowManagePage'
       },
       {
         title:'通讯录',
@@ -37,7 +38,7 @@ export class Home {
       }
     ];
   }
-  
+
   itemTapped(event, item) {
     this.navCtrl.push(item.page);
   }

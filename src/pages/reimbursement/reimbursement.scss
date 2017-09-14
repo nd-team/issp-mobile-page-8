@@ -54,17 +54,12 @@ page-reimbursement {
                 text-align: center;
                 padding-left: 0;
                 cursor: pointer;
-                &:first-child{
+                &.active-child{
                     color: #38c0ff;
                 }
             }
             .item-ios{
-                text-align: center;
-                padding-left: 0;
-                cursor: pointer;
-                &:first-child{
-                    color: #38c0ff;
-                }
+                @extend .item-md;
             }
         }
         #status-list{
