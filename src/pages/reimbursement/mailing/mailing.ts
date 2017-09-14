@@ -1,27 +1,25 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ReimbursementPage } from '../reimbursement/reimbursement';
+
+
 /**
- * Generated class for the VerificationPage page.
+ * Generated class for the MailingPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-reimbursement-invoice',
-  templateUrl: 'reimbursement-invoice.html',
+  selector: 'page-mailing',
+  templateUrl: 'mailing.html',
 })
-export class ReimbursementInvoice {
-
+export class MailingPage {
+  person: string = '王博文';
+  sendTime = '2017-09-08'; 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ReimbursementInvoice');
-  }
-
-  complete(){
-    this.navCtrl.push(ReimbursementPage);
+    console.log('ionViewDidLoad MailingPage');
   }
 }

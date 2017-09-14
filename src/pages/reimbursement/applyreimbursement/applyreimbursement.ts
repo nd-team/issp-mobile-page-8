@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ReimbursementPage } from '../reimbursement/reimbursement';
+import { ReimbursementPage } from '../../reimbursement/reimbursement';
 
 
 @IonicPage()
@@ -43,7 +43,7 @@ export class ApplyreimbursementPage {
     console.log(form.value)
   }
   submit(){
-    this.navCtrl.push(ReimbursementPage);
+    this.navCtrl.push('ReimbursementPage');
   }
   addImage() {
     let o:any = {id:this.Iamges.length,url:'assets/imgs/userImage2.png'};

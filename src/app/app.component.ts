@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { Home } from '../pages/home/home';
-import { ReimbursementInvoice } from '../pages/reimbursement-invoice/reimbursement-invoice';
+// import { Number } from '../pages/number/number';
 // import { AccordionListPage } from '../pages/accordion-list/accordion-list';
 
 

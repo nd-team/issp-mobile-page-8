@@ -4,16 +4,16 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { Home } from '../pages/home/home';
-import { SettingPage } from '../pages/setting/setting';
+// import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
 
 //报销
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
-import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
-import { MailingPage } from '../pages/mailing/mailing';
-import { SendDetails } from '../pages/sendDetails/sendDetails';
-import { Payment } from '../pages/payment/payment';
-import { Reimbursed } from '../pages/reimbursed/reimbursed';
+// import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
+// import { MailingPage } from '../pages/mailing/mailing';
+// import { SendDetails } from '../pages/sendDetails/sendDetails';
+// import { Payment } from '../pages/payment/payment';
+// import { Reimbursed } from '../pages/reimbursed/reimbursed';
 // 报销
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,11 +31,12 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
   declarations: [
     MyApp,
     Home,
-    ApplyreimbursementPage,
-    MailingPage,
-    SendDetails,
-    Payment,
-    Reimbursed
+    // SettingPage,
+    // ApplyreimbursementPage,
+    // MailingPage,
+    // SendDetails,
+    // Payment,
+    // Reimbursed
 
   ],
   imports: [
@@ -54,12 +55,11 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
   entryComponents: [
     MyApp,
     Home,
-    SettingPage,
-    ApplyreimbursementPage,
-    MailingPage,
-    SendDetails,
-    Payment,
-    Reimbursed
+    // SettingPage,
+    // MailingPage,
+    // SendDetails,
+    // Payment,
+    // Reimbursed
   ],
   providers: [
     StatusBar,

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ApplyreimbursementPage } from '../applyreimbursement/applyreimbursement';
-import { ReimdetailsPage } from '../reimdetails/reimdetails';
+import { ApplyreimbursementPage } from './applyreimbursement/applyreimbursement';
+import { ReimdetailsPage } from './reimdetails/reimdetails';
 
 /**
  * Generated class for the ReimbursementPage page.
@@ -16,7 +16,7 @@ import { ReimdetailsPage } from '../reimdetails/reimdetails';
 })
 export class ReimbursementPage {
   // show = false;
-  isClassVisible: false;
+  // isClassVisible: false;
   private show :boolean = false;
   private index : number = 0;
   private seleFont :string;
@@ -103,7 +103,7 @@ export class ReimbursementPage {
       currentStatus:'待解冻'
     }
   ];
- 
+
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -131,7 +131,7 @@ export class ReimbursementPage {
         }
     }
   }
-  
+
   ionViewDidLoad() {
     this.statusButton = this.status;
   }
@@ -140,7 +140,7 @@ export class ReimbursementPage {
     this.index = i;
     this.seleFont = val;
     if (val && val.trim() != '') {
-      this.statusButton = this.status.filter((item) => { 
+      this.statusButton = this.status.filter((item) => {
         if(val == '全部')return item;
         if(item.currentStatus == val){
           return item;
@@ -151,7 +151,7 @@ export class ReimbursementPage {
 
 
   apply() {
-    this.navCtrl.push(ApplyreimbursementPage);
+    this.navCtrl.push('ApplyreimbursementPage');
   }
 
   toDetail(name:string){

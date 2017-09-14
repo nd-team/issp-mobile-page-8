@@ -46,12 +46,12 @@
   </div>
 
   <div id="toChecked" *ngIf="status == '待核对'">
-      <button ion-button color="wrongColor" class="check-wrong">核对有误</button>
-      <button ion-button color="danger" class="pay">去付款</button>  
+      <button ion-button icon-only color="wrongColor" class="check-wrong">核对有误</button>
+      <button ion-button icon-only color="danger" class="pay">去付款</button>  
   </div>
   
-  <button ion-button full block id="button" color="orangel" *ngIf="status == '待审核'" (click)="send()">{{buttonName}}</button>
+  <button ion-button full block icon-only id="button" color="orangel" *ngIf="status == '待审核'" (click)="send()">{{buttonName}}</button>
   <!-- <button ion-button full block id="button" color="danger" *ngIf="isAuditor" (click)="send()">去审核</button> -->
-  <button ion-button full block id="button" color="orangel" *ngIf="status == '待解冻'">{{buttonName}}</button>
-  <button ion-button full block id="button" color="danger" *ngIf="status == '待分析'">{{buttonName}}</button>
+  <button ion-button full block icon-only id="button" color="orangel" *ngIf="status == '待解冻'">{{buttonName}}</button>
+  <button ion-button full block icon-only id="button" color="danger" *ngIf="status == '待分析'">{{buttonName}}</button>
 </ion-content>
