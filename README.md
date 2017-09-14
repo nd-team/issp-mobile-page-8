@@ -9,10 +9,10 @@ issp移动端
 
 
 ```
-$ git clone https://github.com/srinivastamada/ionic-welcome.git
-$ cd ionic-welcome
+$ git clone fork到自己分支的地址
+$ cd issp-mobile-page-8
 $ npm install
-$ ionic serve
+$ ionic serve 或 ionic serve -l
 
 ```
 
