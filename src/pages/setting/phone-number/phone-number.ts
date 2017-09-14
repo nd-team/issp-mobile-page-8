@@ -15,6 +15,7 @@ export class PhoneNumber {
   next() {
     this.navCtrl.push('NumberNew');
   }
+  
   ionViewDidLoad() {
     console.log('ionViewDidLoad PhoneNumber');
   }
