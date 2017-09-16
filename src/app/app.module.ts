@@ -4,16 +4,11 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { Home } from '../pages/home/home';
-// import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
 
 //报销
 import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
-// import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
-// import { MailingPage } from '../pages/mailing/mailing';
-// import { SendDetails } from '../pages/sendDetails/sendDetails';
-// import { Payment } from '../pages/payment/payment';
-// import { Reimbursed } from '../pages/reimbursed/reimbursed';
+
 // 报销
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -27,10 +22,16 @@ import { ApplyborrowmoneyPageModule } from '../pages/applyborrowmoney/applyborro
 import { BorrowDetailPageModule } from '../pages/borrow-detail/borrow-detail.module';
 import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.module';
 
+
+//通讯录
+import { ContactsModule } from '../pages/contacts/contacts.module';
+// modals
+// import { ExternalAddress as  ModalContentPage } from '../pages/contacts/external-address/external-address';
 @NgModule({
   declarations: [
     MyApp,
     Home,
+    // ModalContentPage
     // SettingPage,
     // ApplyreimbursementPage,
     // MailingPage,
@@ -43,18 +44,26 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
     BrowserModule,
     IonicModule.forRoot(MyApp,{
       backButtonText:''
-    }),
+    },
+    // {
+    //   links: [
+    //     { component: ModalContentPage, name:'ModalContentPage', segment:'modal-content'}
+    //   ]
+    // }
+  ),
     SettingPageModule,
     ReimbursementPageModule,
     BorrowManagePageModule,
     BorrowDetailPageModule,
     ApplyborrowmoneyPageModule,
-    AccordionListPageModule
+    AccordionListPageModule,
+    ContactsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     Home,
+    // ModalContentPage
     // SettingPage,
     // MailingPage,
     // SendDetails,

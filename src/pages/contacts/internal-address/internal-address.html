@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="energy">
+    <ion-buttons end>
+      <button ion-button>
+        在职
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="contactInternal">
+  <div id="inter">
+    <div class="person-top">
+      <ion-avatar class="avatar-head">
+        <img src="assets/imgs/avatar3.png">
+        <ion-icon name="my-avatar" color="energy" class="person"></ion-icon>
+      </ion-avatar>
+      <h2>王博文</h2>
+      <p class="post">一线实施体系 <span>产品专员</span></p>
+    </div>
+  </div>
+  <div id="infoList">
+    <ion-list>
+      <ion-item class="item-list" *ngFor="let inforItem of inforItems"> 
+        <span>{{inforItem.tool}}</span>
+        <span>{{inforItem.details}}</span>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="bgColor" id="footer-btn">
+    <a ion-button class="email-btn" color="white">
+      <ion-icon name="mail" color="energy" class="mail"></ion-icon>
+      邮件
+    </a>
+    <a ion-button class="email-btn" color="white" (click)="showPrompt()">
+        <ion-icon name="call" color="green" class="mail"></ion-icon>
+      电话
+    </a>
+  </ion-toolbar>
+</ion-footer>

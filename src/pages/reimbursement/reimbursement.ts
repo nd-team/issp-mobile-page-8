@@ -63,7 +63,7 @@ export class ReimbursementPage {
     {
       nameWipe:'王博文的报销',
       wipeTime:'报销发生时间：2017-08-25',
-      date:'2017-08-31',
+      date:'2017-08-31 10:00:00',
       currentStatus:'已报销'
     },
     {
