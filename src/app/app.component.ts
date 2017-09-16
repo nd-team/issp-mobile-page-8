@@ -3,8 +3,11 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+// import * as helpers from '../directives/helpers';
+
 import { Home } from '../pages/home/home';
-// import { Number } from '../pages/number/number';
+// import { ExternalAddress } from '../pages/contacts/external-address/external-address';
+
 // import { AccordionListPage } from '../pages/accordion-list/accordion-list';
 
 

@@ -31,6 +31,7 @@ export class Home {
       },
       {
         title:'通讯录',
+        page:'Contacts'
       },
       {
         title:'设置',
