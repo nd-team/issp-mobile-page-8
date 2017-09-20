@@ -1,7 +1,7 @@
 page-reviewReason{
     #checkReason{
         #pass{
-            height: 100%;
+            height: auto;
             border-left: 1px solid #e4e4e4;
             margin-left: 15px;
             .pass-list {
@@ -25,14 +25,16 @@ page-reviewReason{
                         border-radius: 50%;
                     }
                     p{
-                        line-height: 10px;
+                        
                         &.date{
                             color: $lightColor;
                             font-size: 1.6rem;
+                            margin-bottom: 5px;
                         }
                         &.pass-process{
                             color: $darkColor;
                             font-size: 1.7rem;
+                            margin-top: 0;
                         }
                     }
                 }

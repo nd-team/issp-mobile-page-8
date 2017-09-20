@@ -6,6 +6,7 @@ import { VerificationModule } from './verification/verification.module';
 import { ReimdetailsPageModule } from './reimdetails/reimdetails.module';
 import { ReimbursementInvoiceModule } from './reimbursement-invoice/reimbursement-invoice.module';
 import { MailingPageModule } from './mailing/mailing.module';
+import { PaymentModule } from './payment/payment.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MailingPageModule } from './mailing/mailing.module';
     VerificationModule,
     ReimdetailsPageModule,
     ReimbursementInvoiceModule,
-    MailingPageModule
+    MailingPageModule,
+    PaymentModule
   ],
   exports: [
     ReimbursementPage,

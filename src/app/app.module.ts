@@ -25,6 +25,8 @@ import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.mod
 
 //通讯录
 import { ContactsModule } from '../pages/contacts/contacts.module';
+import { ToastService } from '../providers/util/toast.service';
+import { HttpModule } from '@angular/http';
 // modals
 // import { ExternalAddress as  ModalContentPage } from '../pages/contacts/external-address/external-address';
 @NgModule({
@@ -38,7 +40,7 @@ import { ContactsModule } from '../pages/contacts/contacts.module';
     // SendDetails,
     // Payment,
     // Reimbursed
-
+    
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,8 @@ import { ContactsModule } from '../pages/contacts/contacts.module';
     BorrowDetailPageModule,
     ApplyborrowmoneyPageModule,
     AccordionListPageModule,
-    ContactsModule
+    ContactsModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -73,7 +76,8 @@ import { ContactsModule } from '../pages/contacts/contacts.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ToastService
   ]
 })
 export class AppModule {}

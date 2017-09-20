@@ -2,5 +2,13 @@
   "name": "issp-mobile-page-8",
   "app_id": "",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  },
+  "proxies": [
+    {  
+      "path": "/api",  
+      "proxyUrl": "http://192.168.0.65:51310"  
+    }
+  ]  
 }

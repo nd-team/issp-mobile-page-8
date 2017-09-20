@@ -6,7 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 // import * as helpers from '../directives/helpers';
 
 import { Home } from '../pages/home/home';
-// import { ExternalAddress } from '../pages/contacts/external-address/external-address';
+// import { Payment } from '../pages/reimbursement/payment/payment';
 
 // import { AccordionListPage } from '../pages/accordion-list/accordion-list';
 

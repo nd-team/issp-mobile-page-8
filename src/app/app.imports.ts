@@ -27,9 +27,10 @@
 // import { ExpandableHeader } from '../components/expandable-header/expandable-header';
 // import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { AccordionListComponent } from '../components/accordion-list/accordion-list';
+import { ToastService } from '../providers/util/toast.service';
 
 // Pipes
-// import { MomentPipe } from '../pipes/moment.pipe';
+import { ColorPipe } from '../pipes/color/color';
 // import { TemperaturePipe } from '../pipes/temperature.pipe';
 // import { OrderByPipe } from '../pipes/orderby.pipe';
 // import { ShortenStringPipe } from '../pipes/shorten.pipe';
@@ -47,10 +48,11 @@ export const MODULES = [
 ];
 
 export const PIPES = [
-  // TemperaturePipe, MomentPipe, OrderByPipe, CapitalizePipe, ShortenStringPipe
+  ColorPipe
 ];
 
 export const PROVIDERS = [
+  ToastService
   // AlertService,
   // ToastService,
   // AppState,

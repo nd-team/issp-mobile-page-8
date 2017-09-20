@@ -4,6 +4,7 @@ import { Contacts } from './contacts';
 import { InternalAddressModule } from './internal-address/internal-address.module';
 import { ExternalAddressModule } from './external-address/external-address.module';
 import { BusinessAddressModule } from './business-address/business-address.module';
+import { SharedModule } from '../../app/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { BusinessAddressModule } from './business-address/business-address.modul
     IonicPageModule.forChild(Contacts),
     InternalAddressModule,
     ExternalAddressModule,
-    BusinessAddressModule
+    BusinessAddressModule,
+    SharedModule
   ],
   exports: [
     Contacts

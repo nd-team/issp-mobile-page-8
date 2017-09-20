@@ -25,24 +25,24 @@ export class BusinessAddress {
       details:'284579518@qq.com'
     },
     {
-      tool:'员工编号',
-      details:'IKE000254'
+      tool:'客户来源',
+      details:'推荐'
     },
     {
-      tool:'单位',
-      details:'阿里巴巴'
+      tool:'关系程度',
+      details:'很好'
     },
     {
-      tool:'主要负责',
-      details:'项目管理'
+      tool:'重要性级别',
+      details:'中'
     },
     {
       tool:'地区',
       details:'广州'
     },
     {
-      tool:'填写人',
-      details:'黑玫瑰'
+      tool:'第一介绍人',
+      details:'孟小宝'
     },
     {
       tool:'备注',

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { Component, ViewChildren, ViewChild, ChangeDetectorRef } from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform, Content } from 'ionic-angular';
+import { ToastService } from '../../providers/util/toast.service';
 
 /**
  * Generated class for the ContactsPage page.
@@ -14,7 +15,17 @@ import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 })
 export class Contacts {
   pet: string = "internal";
+  index: string = 'A';
+  showModal: boolean = false;
+  timeout: any;
+  contacts: Array<any> = [];
+  items = [];
+  indexes: Array<string> = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split('');
+  offsetTops: Array<number> = [];
   isAndroid: boolean = false;
+
+  @ViewChildren('IonItemGroup') IonItemGroup;
+  @ViewChild(Content) content: Content;
   armenias: any =  [
     {
       imageUrl:'assets/imgs/avatar2.png',
@@ -77,36 +88,32 @@ export class Contacts {
     }
   ];
 
-  letters: any = [
-    "A",
-    "B",
-    "C",
-    "D",
-    "E",
-    "F",
-    "G",
-    "H",
-    "I",
-    "J",
-    "K",
-    "L",
-    "M",
-    "N",
-    "O",
-    "P",
-    "Q",
-    "R",
-    "S",
-    "T",
-    "U",
-    "V",
-    "W",
-    "X",
-    "Y",
-    "Z"
-  ]
-  constructor(platform: Platform, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    platform: Platform, 
+    public navCtrl: NavController, 
+    public navParams: NavParams, 
+    private http: ToastService,
+    public ref: ChangeDetectorRef) {
     this.isAndroid = platform.is('android');
+
+    for (var i = 0; i < 30; i++) {
+      this.items.push( this.items.length );
+    }
+
+    // for(let i = 0;i < this.contacts.length; i++){
+    //   let currentColor =this.contacts[i].currentStatus
+    //     switch(currentColor){
+    //       case 'NONE':
+    //       this.contacts[i].color = ''
+    //       break;
+    //       case 'MAN':
+    //         this.contacts[i].color = 'energy'
+    //         break;
+    //       case 'WOMAN':
+    //         this.contacts[i].color = 'womenColor'
+    //         break;
+    //     }
+    // }
   }
   
   openInternalPage(armenia) {
@@ -121,7 +128,24 @@ export class Contacts {
     this.navCtrl.push('BusinessAddress', { business: business });
   }
   ionViewDidLoad() {
-    console.log('ionViewDidLoad Contacts');
-  }
+    this.http.get('internalcontacts/v1/mobile/list')
+    .then( res => {
+      this.contacts = res.data;
+      console.log(this.contacts);
+    })
+    // console.log('ionViewDidLoad Contacts');
+  } 
+  
+  doInfinite(infiniteScroll) {
+    // console.log('Begin async operation');
 
+    setTimeout(() => {
+      for (let i = 0; i < 30; i++) {
+        this.items.push( this.items.length );
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
+  }
 }

@@ -13,4 +13,4 @@ import { Payment } from './payment';
     Payment
   ]
 })
-export class MailingPageModule {}
+export class PaymentModule {}
