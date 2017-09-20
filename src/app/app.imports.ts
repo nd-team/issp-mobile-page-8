@@ -22,19 +22,13 @@
 // import { Autosize } from '../components/autosize/autosize';
 
 // Components
-// import { Timer } from '../components/countdown-timer/timer';
-// import { TimerProgress } from '../components/timer-progress/timer-progress';
-// import { ExpandableHeader } from '../components/expandable-header/expandable-header';
-// import { FlashCardComponent } from '../components/flash-card/flash-card';
 import { AccordionListComponent } from '../components/accordion-list/accordion-list';
 import { ToastService } from '../providers/util/toast.service';
+import { Contacts } from '../providers/contacts';
 
 // Pipes
 import { ColorPipe } from '../pipes/color/color';
-// import { TemperaturePipe } from '../pipes/temperature.pipe';
-// import { OrderByPipe } from '../pipes/orderby.pipe';
-// import { ShortenStringPipe } from '../pipes/shorten.pipe';
-// import { CapitalizePipe } from '../pipes/capitalize.pipe';
+
 
 // Modules
 // import { SwingModule } from 'angular2-swing';
@@ -52,7 +46,8 @@ export const PIPES = [
 ];
 
 export const PROVIDERS = [
-  ToastService
+  ToastService,
+  Contacts
   // AlertService,
   // ToastService,
   // AppState,

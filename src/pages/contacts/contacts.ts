@@ -1,6 +1,7 @@
 import { Component, ViewChildren, ViewChild, ChangeDetectorRef } from '@angular/core';
 import { IonicPage, NavController, NavParams, Platform, Content } from 'ionic-angular';
 import { ToastService } from '../../providers/util/toast.service';
+import {Contacts} from '../../providers/contacts'
 
 /**
  * Generated class for the ContactsPage page.
@@ -13,7 +14,7 @@ import { ToastService } from '../../providers/util/toast.service';
   selector: 'page-contacts',
   templateUrl: 'contacts.html',
 })
-export class Contacts {
+export class ContactsPage {
   pet: string = "internal";
   index: string = 'A';
   showModal: boolean = false;
@@ -23,29 +24,11 @@ export class Contacts {
   indexes: Array<string> = "ABCDEFGHIJKLMNOPQRSTUVWXYZ#".split('');
   offsetTops: Array<number> = [];
   isAndroid: boolean = false;
+  groupName: string;
 
-  @ViewChildren('IonItemGroup') IonItemGroup;
+  @ViewChildren('IonItemGroup') ionItemGroup;
   @ViewChild(Content) content: Content;
-  armenias: any =  [
-    {
-      imageUrl:'assets/imgs/avatar2.png',
-      contactName:"艾佳",
-      branch: '一线实施体系',
-      post: '产品专员'
-    },
-    {
-      imageUrl:'assets/imgs/avatar3.png',
-      contactName:"艾米",
-      branch: '一线实施体系',
-      post: '前端工程师'
-    },
-    {
-      imageUrl:'assets/imgs/avatar4.png',
-      contactName:"爱媛",
-      branch: '一线实施体系',
-      post: '后台工程师'
-    }
-  ];
+
   outer: any =  [
     {
       imageUrl:'assets/imgs/avatar2.png',
@@ -93,27 +76,13 @@ export class Contacts {
     public navCtrl: NavController, 
     public navParams: NavParams, 
     private http: ToastService,
-    public ref: ChangeDetectorRef) {
+    public ref: ChangeDetectorRef,
+    public contactsSever: Contacts) {
     this.isAndroid = platform.is('android');
 
     for (var i = 0; i < 30; i++) {
       this.items.push( this.items.length );
     }
-
-    // for(let i = 0;i < this.contacts.length; i++){
-    //   let currentColor =this.contacts[i].currentStatus
-    //     switch(currentColor){
-    //       case 'NONE':
-    //       this.contacts[i].color = ''
-    //       break;
-    //       case 'MAN':
-    //         this.contacts[i].color = 'energy'
-    //         break;
-    //       case 'WOMAN':
-    //         this.contacts[i].color = 'womenColor'
-    //         break;
-    //     }
-    // }
   }
   
   openInternalPage(armenia) {
@@ -136,6 +105,53 @@ export class Contacts {
     // console.log('ionViewDidLoad Contacts');
   } 
   
+  
+  ionViewDidEnter() {
+    this.getOffsetTops();
+}
+
+getOffsetTops() {
+    this.offsetTops = this.ionItemGroup._results.map(ele => {
+        return ele.nativeElement.offsetTop
+    })
+}
+
+selectIndex(index: number) {
+    this.index = this.indexes[index];
+    const offsetTop = this.offsetTops[index];
+    this.content.scrollTo(0, offsetTop, 300);
+    this.createModal();
+}
+
+
+onScroll() {
+
+    const threshold = 42;
+
+    if (this.content.scrollTop < threshold) {
+        this.index = this.indexes[0];
+        return;
+    }
+
+    for (let i = this.offsetTops.length; i > 0; i--) {
+        if (this.content.scrollTop + threshold >= this.offsetTops[i]) {
+            this.index = this.indexes[i];
+            this.ref.detectChanges();
+            return;
+        }
+    }
+}
+
+createModal() {
+    clearTimeout(this.timeout);
+    this.showModal = true;
+    this.timeout = setTimeout(() => {
+        this.showModal = false;
+        this.ref.detectChanges();
+    }, 800)
+}
+
+
   doInfinite(infiniteScroll) {
     // console.log('Begin async operation');
 

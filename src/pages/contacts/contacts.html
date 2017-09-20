@@ -24,7 +24,7 @@
 </ion-header>
 
 
-<ion-content id="contacts">
+<ion-content id="contacts" (ionScroll)="onScroll()">
   <div [ngSwitch]="pet">
     <!-- 内部通讯录 -->
     <div *ngSwitchCase="'internal'">
