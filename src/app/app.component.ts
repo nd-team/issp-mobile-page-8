@@ -3,19 +3,14 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-// import * as helpers from '../directives/helpers';
-
-import { Home } from '../pages/home/home';
-// import { ExternalAddress } from '../pages/contacts/external-address/external-address';
-
-// import { AccordionListPage } from '../pages/accordion-list/accordion-list';
-
+import { Welcome } from '../pages/welcome/welcome';
+// import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Home;
+  rootPage:any = Welcome;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
