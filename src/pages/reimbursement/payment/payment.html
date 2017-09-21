@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar color="energy" >
+    <ion-title>付款</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="successAlert()" class="sure">确认</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content id="post">
+  <ion-list>
+    <ion-item>
+        <ion-label>付款方式</ion-label>
+        <ion-select [(ngModel)]="payWay" interface="popover">
+          <ion-option value="现金">现金</ion-option>
+          <ion-option value="支付宝">支付宝</ion-option>
+          <ion-option value="微信">微信</ion-option>
+          <ion-option value="银行卡">银行卡</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item id="adress">
+        <ion-label>付款金额</ion-label>
+        <ion-input type="text" placeholder="请输入金额" class="input-address"></ion-input>
+        <!-- <span>元</span> -->
+      </ion-item>
+      <ion-item id="remarks">
+          <ion-label>付款说明</ion-label>        
+      </ion-item>
+      <ion-item id="block">
+        <ion-textarea placeholder="请输入说明" class="textrea"></ion-textarea>
+      </ion-item>    
+  </ion-list>
+    
+</ion-content>

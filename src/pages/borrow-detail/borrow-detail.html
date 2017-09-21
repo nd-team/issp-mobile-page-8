@@ -105,10 +105,10 @@
           <ion-icon name="my-arrow-right" md="md-my-arrow-right" color="lightprimary" clear item-right></ion-icon>
       </ion-item>
     </ion-list>
-      <button ion-button icon-only color="red" class="pay" *ngIf="isAuditor" (click)="buttonFn(status)">
+      <button ion-button icon-only full color="red" class="pay" *ngIf="isAuditor" (click)="buttonFn(status)">
         {{buttonName || '待定'}}
       </button>
-      <button ion-button icon-only color="orangel" class="pay" *ngIf="status == '待解冻'">
+      <button ion-button icon-only full color="orangel" class="pay" *ngIf="status == '待解冻'">
         {{ buttonName }}
       </button>
 </ion-content>

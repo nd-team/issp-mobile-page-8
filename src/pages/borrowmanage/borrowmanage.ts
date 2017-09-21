@@ -139,6 +139,6 @@ export class BorrowManagePage {
     this.navCtrl.push('ApplyborrowmoneyPage');
   }
   goDetail(name:string) {
-    this.navCtrl.push('BorrowDetailPage',{name:name});
+    this.navCtrl.push('BorrowDetailPage',{ name:name });
   }
 }

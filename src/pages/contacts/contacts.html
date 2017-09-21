@@ -1,0 +1,135 @@
+
+<ion-header>
+  <ion-navbar  color="energy" text-center>
+    <ion-title>通讯录</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name='search'></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top no-border-bottom color="white">
+    <ion-segment [(ngModel)]="pet" id="toolbar">
+      <ion-segment-button value="internal">
+        内部通讯录
+      </ion-segment-button>
+      <ion-segment-button value="external">
+        外部通讯录
+      </ion-segment-button>
+      <ion-segment-button value="business">
+        商务通讯录
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content id="contacts">
+  <div [ngSwitch]="pet">
+    <!-- 内部通讯录 -->
+    <div *ngSwitchCase="'internal'">
+      <ion-item-group>
+        <ion-item-divider color="bgColor">A</ion-item-divider>
+        <ion-item *ngFor="let armenia of armenias" id="contact-list" (click)="openInternalPage(armenia)">
+          <ion-thumbnail item-start>
+            <img [src]="armenia.imageUrl">
+          </ion-thumbnail>
+          <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
+          <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
+        </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider color="bgColor" >B</ion-item-divider>
+        <ion-item *ngFor="let armenia of armenias" (click)="openInternalPage(armenia)">
+          <ion-thumbnail item-start>
+            <img [src]="armenia.imageUrl">
+          </ion-thumbnail>
+          <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
+          <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
+        </ion-item>
+      </ion-item-group>
+      <ion-item-group>
+          <ion-item-divider color="bgColor">C</ion-item-divider>
+          <ion-item *ngFor="let armenia of armenias" (click)="openInternalPage(armenia)">
+            <ion-thumbnail item-start>
+              <img [src]="armenia.imageUrl">
+            </ion-thumbnail>
+            <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
+            <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
+          </ion-item>
+        </ion-item-group>
+    </div>
+
+    <!-- 外部通讯录 -->
+    <div *ngSwitchCase="'external'">
+        <ion-item-group>
+          <ion-item-divider color="bgColor" >A</ion-item-divider>
+          <ion-item *ngFor="let out of outer" id="contact-list" (click)="openOuternalPage(out)">
+            <ion-thumbnail item-start>
+              <img [src]="out.imageUrl">
+            </ion-thumbnail>
+            <h2>{{out.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
+            <p>{{out.branch}} <span>{{out.post}}</span></p>    
+          </ion-item>
+        </ion-item-group>
+        <ion-item-group>
+          <ion-item-divider color="bgColor" >B</ion-item-divider>
+          <ion-item *ngFor="let out of outer" (click)="openOuternalPage(out)">
+            <ion-thumbnail item-start>
+              <img [src]="out.imageUrl">
+            </ion-thumbnail>
+            <h2>{{out.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
+            <p>{{out.branch}} <span>{{out.post}}</span></p>    
+          </ion-item>
+        </ion-item-group>
+        <ion-item-group>
+            <ion-item-divider color="bgColor">C</ion-item-divider>
+            <ion-item *ngFor="let out of outer" (click)="openOuternalPage(out)">
+              <ion-thumbnail item-start>
+                <img [src]="out.imageUrl">
+              </ion-thumbnail>
+              <h2>{{out.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
+              <p>{{out.branch}} <span>{{out.post}}</span></p>    
+            </ion-item>
+          </ion-item-group>
+      </div>
+
+      <!-- 商务通讯录 -->
+      <div *ngSwitchCase="'business'">
+          <ion-item-group>
+            <ion-item-divider color="bgColor" >A</ion-item-divider>
+            <ion-item *ngFor="let business of businesses" id="contact-list" (click)="openBusinessPage(business)">
+              <ion-thumbnail item-start>
+                <img [src]="business.imageUrl">
+              </ion-thumbnail>
+              <h2>{{business.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
+              <p>{{business.branch}} <span>{{business.post}}</span></p>    
+            </ion-item>
+          </ion-item-group>
+          <ion-item-group>
+            <ion-item-divider color="bgColor" >B</ion-item-divider>
+            <ion-item *ngFor="let business of businesses" (click)="openBusinessPage(business)">
+              <ion-thumbnail item-start>
+                <img [src]="business.imageUrl">
+              </ion-thumbnail>
+              <h2>{{business.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
+              <p>{{business.branch}} <span>{{business.post}}</span></p>    
+            </ion-item>
+          </ion-item-group>
+          <ion-item-group>
+              <ion-item-divider color="bgColor">C</ion-item-divider>
+              <ion-item *ngFor="let business of businesses" (click)="openBusinessPage(business)">
+                <ion-thumbnail item-start>
+                  <img [src]="business.imageUrl">
+                </ion-thumbnail>
+                <h2>{{business.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
+                <p>{{business.branch}} <span>{{business.post}}</span></p>    
+              </ion-item>
+            </ion-item-group>
+        </div>
+  </div>
+
+  <div id="letter">
+    <p *ngFor="let letter of letters">{{letter}}</p>
+  </div>
+</ion-content>

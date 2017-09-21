@@ -1,0 +1,20 @@
+
+<ion-header>
+
+  <ion-navbar color="energy">
+    <ion-title>其他信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content id="otherInfo">
+  <div id="infoOther">
+    <ion-list>
+      <ion-item class="item-list" *ngFor="let otherItem of otherItems"> 
+        <span>{{otherItem.otherNews}}</span>
+        <span>{{otherItem.details}}</span>
+      </ion-item>  
+    </ion-list>
+  </div>
+</ion-content>

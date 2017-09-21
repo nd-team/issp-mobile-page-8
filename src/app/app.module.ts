@@ -4,16 +4,15 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import { Home } from '../pages/home/home';
-import { SettingPage } from '../pages/setting/setting';
 import { SettingPageModule } from '../pages/setting/setting.module';
-import { ReimbursementPage } from '../pages/reimbursement/reimbursement';
-import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
-import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
-import { ReimdetailsPage } from '../pages/reimdetails/reimdetails';
-import { ReviewersDetailsPage } from '../pages/reviewersDetails/reviewersDetails';
 
+//报销
+import { ReimbursementPageModule } from '../pages/reimbursement/reimbursement.module';
+
+// 报销
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { AccordionListPageModule } from '../pages/accordion-list/accordion-list.module';
 
 //借款
 import { BorrowManagePage } from '../pages/borrowmanage/borrowmanage';
@@ -23,37 +22,53 @@ import { ApplyborrowmoneyPageModule } from '../pages/applyborrowmoney/applyborro
 import { BorrowDetailPageModule } from '../pages/borrow-detail/borrow-detail.module';
 import { BorrowReturnPageModule } from '../pages/borrow-return/borrow-return.module';
 
+
+//通讯录
+import { ContactsModule } from '../pages/contacts/contacts.module';
+// modals
+// import { ExternalAddress as  ModalContentPage } from '../pages/contacts/external-address/external-address';
 @NgModule({
   declarations: [
     MyApp,
     Home,
-    // ReimbursementPage,
-    ApplyreimbursementPage,
+    // ModalContentPage
+    // SettingPage,
+    // ApplyreimbursementPage,
+    // MailingPage,
+    // SendDetails,
+    // Payment,
+    // Reimbursed
 
-    ReimdetailsPage,
-    BorrowManagePageModule,
-    BorrowDetailPageModule,
-    ApplyborrowmoneyPageModule,
-    ReviewersDetailsPage
-    // SettingPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp,{
       backButtonText:''
-    }),
+    },
+    // {
+    //   links: [
+    //     { component: ModalContentPage, name:'ModalContentPage', segment:'modal-content'}
+    //   ]
+    // }
+  ),
     SettingPageModule,
-    ReimbursementPageModule
+    ReimbursementPageModule,
+    BorrowManagePageModule,
+    BorrowDetailPageModule,
+    ApplyborrowmoneyPageModule,
+    AccordionListPageModule,
+    ContactsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     Home,
-    SettingPage,
-    ReimbursementPage,
-    ApplyreimbursementPage,
-    ReimdetailsPage,
-    ReviewersDetailsPage
+    // ModalContentPage
+    // SettingPage,
+    // MailingPage,
+    // SendDetails,
+    // Payment,
+    // Reimbursed
   ],
   providers: [
     StatusBar,
