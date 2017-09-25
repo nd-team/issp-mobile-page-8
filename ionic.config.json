@@ -8,7 +8,7 @@
   "proxies": [
     {  
       "path": "/api",  
-      "proxyUrl": "http://192.168.0.54:51216"  
+      "proxyUrl": "http://192.168.0.65:51310"  
     }
   ]  
 }

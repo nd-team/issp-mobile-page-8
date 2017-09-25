@@ -1,22 +1,24 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { Contacts } from './contacts';
+import { ContactsPage } from './contacts';
 import { InternalAddressModule } from './internal-address/internal-address.module';
 import { ExternalAddressModule } from './external-address/external-address.module';
 import { BusinessAddressModule } from './business-address/business-address.module';
+import { SharedModule } from '../../app/shared.module';
 
 @NgModule({
   declarations: [
-    Contacts,
+    ContactsPage,
   ],
   imports: [
-    IonicPageModule.forChild(Contacts),
+    IonicPageModule.forChild(ContactsPage),
     InternalAddressModule,
     ExternalAddressModule,
-    BusinessAddressModule
+    BusinessAddressModule,
+    SharedModule
   ],
   exports: [
-    Contacts
+    ContactsPage
   ]
 })
-export class ContactsModule {}
+export class ContactsPageModule {}

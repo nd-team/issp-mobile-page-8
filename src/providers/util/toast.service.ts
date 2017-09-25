@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import $ from 'jquery';
+// import $ from 'jquery';
+
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ToastService {
   private rs:any = {msg:'?'};
   private token:string = '98583469460d423fa85a04f0d4ba1e64.3232235640.1505879087257';
+
   constructor(
       public http:Http
 ) { 
@@ -26,7 +28,7 @@ export class ToastService {
      let headers = new Headers({
          'Content-Type':"application/x-www-form-urlencoded; charset=UTF-8",
          'userToken':this.token});
-     return this.http.post('/api/'+ url, $.param(paramObj), new RequestOptions({headers: headers}))
+     return this.http.post('/api/'+ url, this.toBodyString(paramObj), new RequestOptions({headers: headers}))
        .toPromise()
        .then(res => this.handleSuccess(res.json()))
        .catch(error => this.handleError(error));

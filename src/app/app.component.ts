@@ -3,8 +3,12 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { Welcome } from '../pages/welcome/welcome';
-// import { ApplyreimbursementPage } from '../pages/applyreimbursement/applyreimbursement';
+
+// import * as helpers from '../directives/helpers';
+
+import { Home } from '../pages/home/home';
+
+
 
 @Component({
   templateUrl: 'app.html'

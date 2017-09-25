@@ -18,7 +18,7 @@ export class ReviewReason {
   items = [
     {
       time:'2017-09-11',
-      description:'审核通过原因:符合标准'
+      description:'审核通过原因:符合标准符合标准符<br/>审核通过原因1:合标准符合标准符合标准符合标准'
     },
     {
       time:'2017-09-08',

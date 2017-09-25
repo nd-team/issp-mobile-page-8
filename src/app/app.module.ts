@@ -24,49 +24,53 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MultiPickerModule } from 'ion-multi-picker';
 import { PROVIDERS } from './imports';
 
+
+//通讯录
+import { ContactsPageModule } from '../pages/contacts/contacts.module';
+import { ToastService } from '../providers/util/toast.service';
+import { HttpModule } from '@angular/http';
+import { Contacts } from '../providers/contacts';
+
+// modals
+// import { ExternalAddress as  ModalContentPage } from '../pages/contacts/external-address/external-address';
 @NgModule({
   declarations: [
     MyApp,
-    Welcome,
-    Login,
-    Signup,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    ApplyreimbursementPage
-  ], 
+    Home
+    
+  ],
+
   imports: [
     HttpModule,
     BrowserModule,
     IonicModule.forRoot(MyApp,{
       backButtonText:'',
-      cancelButton:' 取消'
     }),
     SettingPageModule,
     ReimbursementPageModule,
+
     MultiPickerModule ,
     SharedModule
+    BorrowManagePageModule,
+    BorrowDetailPageModule,
+    ApplyborrowmoneyPageModule,
+    AccordionListPageModule,
+    ContactsPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Welcome,
-    Login,
-    Signup,
-    AboutPage,
-    ContactPage,
-    HomePage,
-    TabsPage,
-    SettingPage,
-    ReimbursementPage,
-    ApplyreimbursementPage,
+    Home
+
   ],
   providers: [
     StatusBar,
     PROVIDERS,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ToastService,
+    Contacts
   ]
 })
 export class AppModule {}

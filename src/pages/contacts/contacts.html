@@ -24,75 +24,31 @@
 </ion-header>
 
 
-<ion-content id="contacts">
+<ion-content id="contacts" (ionScroll)="onScroll()">
   <div [ngSwitch]="pet">
     <!-- 内部通讯录 -->
     <div *ngSwitchCase="'internal'">
-      <ion-item-group>
-        <ion-item-divider color="bgColor">A</ion-item-divider>
-        <ion-item *ngFor="let armenia of armenias" id="contact-list" (click)="openInternalPage(armenia)">
-          <ion-thumbnail item-start>
-            <img [src]="armenia.imageUrl">
-          </ion-thumbnail>
-          <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
-          <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
-        </ion-item>
-      </ion-item-group>
-      <ion-item-group>
-        <ion-item-divider color="bgColor" >B</ion-item-divider>
-        <ion-item *ngFor="let armenia of armenias" (click)="openInternalPage(armenia)">
-          <ion-thumbnail item-start>
-            <img [src]="armenia.imageUrl">
-          </ion-thumbnail>
-          <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
-          <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
-        </ion-item>
-      </ion-item-group>
-      <ion-item-group>
-          <ion-item-divider color="bgColor">C</ion-item-divider>
-          <ion-item *ngFor="let armenia of armenias" (click)="openInternalPage(armenia)">
+      <ion-item-group *ngFor="let item of contacts" #IonItemGroup>
+        <ion-item-divider color="bgColor" sticky index-key="item.belong">
+          <ion-label>A</ion-label>
+        </ion-item-divider>
+        <ion-item-sliding #slidingItem>
+          <ion-item id="contact-list">
             <ion-thumbnail item-start>
-              <img [src]="armenia.imageUrl">
+              <img src="assets/imgs/avatar4.png">
             </ion-thumbnail>
-            <h2>{{armenia.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
-            <p>{{armenia.branch}} <span>{{armenia.post}}</span></p>    
+            <h2>{{item.username}} <ion-icon name="my-avatar" color="{{item.sex | color}}" class="person"></ion-icon></h2>
+            <p>{{item.department}} <span>{{item.position}}</span></p>    
           </ion-item>
-        </ion-item-group>
+        </ion-item-sliding>        
+      </ion-item-group> 
     </div>
+    <!-- 内部通讯录 -->
 
     <!-- 外部通讯录 -->
     <div *ngSwitchCase="'external'">
-        <ion-item-group>
-          <ion-item-divider color="bgColor" >A</ion-item-divider>
-          <ion-item *ngFor="let out of outer" id="contact-list" (click)="openOuternalPage(out)">
-            <ion-thumbnail item-start>
-              <img [src]="out.imageUrl">
-            </ion-thumbnail>
-            <h2>{{out.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
-            <p>{{out.branch}} <span>{{out.post}}</span></p>    
-          </ion-item>
-        </ion-item-group>
-        <ion-item-group>
-          <ion-item-divider color="bgColor" >B</ion-item-divider>
-          <ion-item *ngFor="let out of outer" (click)="openOuternalPage(out)">
-            <ion-thumbnail item-start>
-              <img [src]="out.imageUrl">
-            </ion-thumbnail>
-            <h2>{{out.contactName}} <ion-icon name="my-avatar" color="energy" class="person"></ion-icon></h2>
-            <p>{{out.branch}} <span>{{out.post}}</span></p>    
-          </ion-item>
-        </ion-item-group>
-        <ion-item-group>
-            <ion-item-divider color="bgColor">C</ion-item-divider>
-            <ion-item *ngFor="let out of outer" (click)="openOuternalPage(out)">
-              <ion-thumbnail item-start>
-                <img [src]="out.imageUrl">
-              </ion-thumbnail>
-              <h2>{{out.contactName}} <ion-icon name="my-avatar" color="womenColor" class="person"></ion-icon></h2>
-              <p>{{out.branch}} <span>{{out.post}}</span></p>    
-            </ion-item>
-          </ion-item-group>
-      </div>
+        
+    </div>
 
       <!-- 商务通讯录 -->
       <div *ngSwitchCase="'business'">
@@ -130,6 +86,14 @@
   </div>
 
   <div id="letter">
-    <p *ngFor="let letter of letters">{{letter}}</p>
+    <p *ngFor="let letter of indexes; let i = index">{{letter}}</p>
   </div>
+  <div class="modal"
+    [class.show]="showModal">
+    {{index}}
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
