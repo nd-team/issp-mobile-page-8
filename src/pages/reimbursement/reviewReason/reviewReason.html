@@ -14,7 +14,7 @@
     <ul class="pass-list">
       <li *ngFor=" let item of items">
         <p class="date">{{item.time}}</p>
-        <p class="pass-process">{{item.description}}</p>
+        <p class="pass-process" [innerHTML]='item.description'></p>
       </li>
     </ul>
   </ion-list>
