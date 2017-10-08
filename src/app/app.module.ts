@@ -29,6 +29,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { MultiPickerModule } from 'ion-multi-picker';
 import { PROVIDERS } from './imports';
 
+
+//通讯录
+import { ContactsPageModule } from '../pages/contacts/contacts.module';
+import { ToastService } from '../providers/util/toast.service';
+import { HttpModule } from '@angular/http';
+import { Contacts } from '../providers/contacts';
+
+// modals
+// import { ExternalAddress as  ModalContentPage } from '../pages/contacts/external-address/external-address';
 @NgModule({
   declarations: [
     MyApp,
@@ -44,7 +53,6 @@ import { PROVIDERS } from './imports';
     BrowserModule,
     IonicModule.forRoot(MyApp,{
       backButtonText:'',
-      cancelButton:' 取消'
     }),
     IonicStorageModule.forRoot({
       name: '__mydb',
@@ -52,6 +60,7 @@ import { PROVIDERS } from './imports';
     }),
     SettingPageModule,
     ReimbursementPageModule,
+
     MultiPickerModule ,
     SharedModule,
     ContactsPageModule,

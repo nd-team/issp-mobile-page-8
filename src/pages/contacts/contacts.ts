@@ -43,7 +43,6 @@ export class ContactsPage {
  
   @ViewChildren('IonItemGroup') ionItemGroup;
   @ViewChild(Content) content: Content;
-
   constructor(
     platform: Platform, 
     public navCtrl: NavController, 
@@ -78,7 +77,6 @@ export class ContactsPage {
           this.allBusiness = this.contactsSever.grouping(res.data);
           this.comContacts = this.contactsSever.grouping(res.data);    
         })
-
   }
   initializeItems() {
     this.innerContacts = this.allInner;
