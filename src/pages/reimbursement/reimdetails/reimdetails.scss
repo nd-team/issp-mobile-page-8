@@ -53,10 +53,10 @@ page-reimdetails {
       }
     }
     .detailLong {
-        :first-child {
-            width: 11rem;
-            text-align: right;
-        }
+       :first-child {
+        width: 11rem;
+        text-align: right;
+      }
     }
     #content {
       &.list>.item-block {
@@ -96,6 +96,7 @@ page-reimdetails {
     #bottom {
       height: auto;
       overflow: hidden;
+      margin-bottom: 3.5rem;
       #details-marks {
         background: #fff;
         margin: 0;
@@ -132,6 +133,19 @@ page-reimdetails {
             }
           }
         }
+      }
+    }
+    .reimBtn {
+      position: fixed;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      line-height: 5rem;
+      text-align: center;
+      color: #fff;
+      .col {
+        padding: 0;
       }
     }
     #button {
@@ -183,11 +197,6 @@ page-reimdetails {
       .pay {
         @extend .check-wrong
       }
-    }
-  }
-  .footer-btn{
-    .col{
-      padding:0;
     }
   }
 }

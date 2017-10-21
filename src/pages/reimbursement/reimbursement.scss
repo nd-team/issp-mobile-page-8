@@ -36,13 +36,12 @@ page-reimbursement {
             background: rgba(0, 0, 0, .5);
             z-index: 2;
         }
-        #select-all{
+        #select-allStatus{
             width: 100%;
-            position: absolute;
+            position: fixed;
             left: 0;
-            top: 0;
+            top: 44px;
             z-index: 10;
-            // background: rgba(0, 0, 0, .5);
             .list-ios > .item-block:first-child{
                 border-top: 0 none;
             }

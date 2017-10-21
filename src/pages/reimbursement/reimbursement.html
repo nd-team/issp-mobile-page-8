@@ -16,7 +16,7 @@
     <ion-refresher-content loadingText="Loading more data..."></ion-refresher-content>
   </ion-refresher>
   <div id="under-model" *ngIf="show"></div>
-  <div id="select-all" *ngIf="show">
+  <div id="select-allStatus" *ngIf="show">
     <ion-list>
       <ion-item *ngFor="let item of items; let i = index" [ngClass]="{'active-child':item.value == seleFont}" (click)="selectFilter(item.msg, item.value)">{{item.value}}</ion-item>
     </ion-list>
