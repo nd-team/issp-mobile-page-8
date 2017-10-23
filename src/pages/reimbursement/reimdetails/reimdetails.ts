@@ -45,6 +45,9 @@ export class ReimdetailsPage {
             this.statusColor = 'orange';
             this.buttonName = '重新编辑提交';
             break;
+          case 'CONGELAUDIT':
+            this.statusColor = 'danger';
+            this.buttonName = '去审核(冻结审核)';
         }
       })
   }
@@ -60,6 +63,8 @@ export class ReimdetailsPage {
       if (reimPhoneShowStatus == 'GOSEND') {
         this.navCtrl.push('MailingPage', { id: this.id, isTicket: this.data.ticketCondition });
       } else if (reimPhoneShowStatus = "GOAUDIT") {
+        this.navCtrl.push('ReimAuditopinonPage', { id: this.id });
+      } else if (reimPhoneShowStatus = "CONGELAUDIT") {
         this.navCtrl.push('ReimAuditopinonPage', { id: this.id });
       } else {
         this.navCtrl.push('ReimdetailsPage', { id: this.id, name: this.buttonStatus, value: this.status });

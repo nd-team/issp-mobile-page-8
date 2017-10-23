@@ -90,7 +90,7 @@
       </div>
     </div>
   </ion-list>
-  <div id="bottom" *ngIf="data.reimPhoneShowStatus =='SENDDETAIL'|| data.reimPhoneShowStatus =='NONE' && data.reimStatus !=='NONE'">
+  <div id="bottom">
     <ion-list no-lines id="details-marks">
       <ion-item class="firstBorder">
         <p class="bottom-text">
@@ -118,17 +118,21 @@
     </ion-list>
   </div>
 
-</ion-content>
+  <div class="reimBtn" *ngIf="(data.reimPhoneShowStatus !=='SENDDETAIL') && (data.reimPhoneShowStatus !=='NONE')">
+    <button ion-button full block icon-only *ngIf="data.reimPhoneShowStatus !=='GOCHECK'" class="button" color="{{statusColor}}"
+      (click)="buttonFn(status,data.reimPhoneShowStatus)">{{buttonName}}</button>
+    <ion-row *ngIf="data.reimPhoneShowStatus =='GOCHECK'">
+      <ion-col col-6>
+        <button ion-button full icon-only class="button" color="grey" (click)="buttonFn(status,data.reimPhoneShowStatus,1)">核对有误</button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full icon-only class="button" color="danger" (click)="buttonFn(status,data.reimPhoneShowStatus,2)">去付款</button>
+      </ion-col>
+    </ion-row>
+  </div>
 
-<ion-footer class="footer-btn" *ngIf="data.reimPhoneShowStatus !=='SENDDETAIL' && data.reimPhoneShowStatus !=='NONE'">
-  <button ion-button full block icon-only *ngIf="data.reimPhoneShowStatus !=='GOCHECK'" class="button" color="{{statusColor}}"
-    (click)="buttonFn(status,data.reimPhoneShowStatus)">{{buttonName}}</button>
-  <ion-row *ngIf="data.reimPhoneShowStatus =='GOCHECK'">
-    <ion-col col-6>
-      <button ion-button full icon-only class="button" color="grey" (click)="buttonFn(status,data.reimPhoneShowStatus,1)">核对有误</button>
-    </ion-col>
-    <ion-col col-6>
-      <button ion-button full icon-only class="button" color="danger" (click)="buttonFn(status,data.reimPhoneShowStatus,2)">去付款</button>
-    </ion-col>
-  </ion-row>
-</ion-footer>
+</ion-content>
+<!-- 
+<ion-footer class="footer-btn" >
+  
+</ion-footer> -->

@@ -2,16 +2,16 @@ my-radio {
     .dpflex {
         display: flex;
         .radio {
-                width: 2.3rem;
-                height: 2.3rem;
+                width: 1.7rem;
+                height: 1.7rem;
                 border: 1px solid gray;
                 border-radius: 1.1rem;
                 justify-content: center;
                 align-items: center;
                 margin: 0 5px;
                 i{
-                    width: 1.8rem;
-                    height:1.8rem;
+                    width: 1.2rem;
+                    height:1.2rem;
                     border-radius: 10px;
                     background: limegreen;
                 }

@@ -105,7 +105,9 @@ export class ReimbursementPage {
         name = 'WAITTHAW'
         break;
     }
-    this.navCtrl.push('ReimdetailsPage', { value: value, name: name, id: id });
+    if(name){
+      this.navCtrl.push('ReimdetailsPage', { value: value, name: name, id: id });
+    }
   }
   dismiss() {
     this.navCtrl.push(Welcome);
